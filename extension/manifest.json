@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "FactFinder",
+  "version": "0.1",
+  "description": "Automatically highlights facts on a page",
+  "icons": {
+    "128": "images/icon.png"
+  },
+  "permissions": [
+    "http://*/*",
+    "https://*/*",
+    "tabs",
+    "contextMenus",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": ["content_script.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
